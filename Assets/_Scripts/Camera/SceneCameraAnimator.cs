@@ -11,31 +11,34 @@ namespace _Scripts.Camera
     {
         [SerializeField] private Ease ease;
         [SerializeField] private float duration;
-        [SerializeField] private Vector3 cameraAnimPos;
-        [SerializeField] private Vector3 cameraStartPos;
-
-        private PlayerControls playerControls;
+        [SerializeField] private Transform cameraAnimPoint;
+        
+        private PlayerControls _playerControls;
+        private PlayerCameraFollower _playerCameraFollower;
         private UnityEngine.Camera _camera;
-
-        public static bool isAnimated;
+        private Vector3 _cameraStartPos;
+        
+        public static bool IsAnimated;
         
 
         private void Awake()
         {
             _camera = UnityEngine.Camera.main;
-            _camera.transform.position = cameraAnimPos;
+            _playerCameraFollower = GetComponent<PlayerCameraFollower>();
         }
 
         private void Start()
         {
+            _cameraStartPos = _camera.transform.position;
             Animate();
         }
-
+        
         private void Animate()
         {
-            isAnimated = true;
+            _camera.transform.position = cameraAnimPoint.position;
+            IsAnimated = true;
             
-            _camera.transform.DOMove(cameraStartPos, duration).SetEase(ease);
+            _camera.transform.DOMove(_cameraStartPos, duration).SetEase(ease);
             StartCoroutine(EnableCameraFollowerScriptRoutine());
 
         }
@@ -45,9 +48,9 @@ namespace _Scripts.Camera
         public IEnumerator EnableCameraFollowerScriptRoutine()
         {
             yield return new WaitForSeconds(duration);
-            gameObject.GetComponent<PlayerCameraFollower>().enabled = true;
+            _playerCameraFollower.enabled = true;
             
-            isAnimated = false;
+            IsAnimated = false;
         }
     }
 }

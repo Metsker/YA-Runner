@@ -7,7 +7,7 @@ namespace Player
 {
     public abstract class PlayerControls : MonoBehaviour
     {
-        [SerializeField] [Min(0)] private float speed = 1;
+        [SerializeField] [Min(0)] private float speed = 7;
         private Camera _camera;
         private Animator _playerAnim;
 
@@ -25,8 +25,8 @@ namespace Player
         private void EditorControls()
         {
             if (Input.GetMouseButton(0) 
-                && !PlayerData.isDead 
-                && !SceneCameraAnimator.isAnimated 
+                && !PlayerData.IsDead 
+                && !SceneCameraAnimator.IsAnimated 
                 && !SaveZoneTriggerPlane.isAnimated)
             {
                 #region Movement
@@ -49,7 +49,7 @@ namespace Player
             {
                 #region
                 
-                if (!PlayerData.isDead)
+                if (!PlayerData.IsDead)
                 {
                     _playerAnim.SetFloat("speed_f", 0);
                 }

@@ -77,7 +77,6 @@ namespace _Scripts.Player
         }
         private void OnDrawGizmosSelected()
         {
-            
             for (var i = 0; i < colors.Count; ++i)
             {
                 colors[i].name = Enum.GetName(typeof(Colors), i);

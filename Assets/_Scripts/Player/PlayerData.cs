@@ -8,15 +8,12 @@ namespace Player
 {
     public class PlayerData : PlayerControls
     {
-        public static bool isDead;
-
         [SerializeField] private ParticleSystem deathExplosionParticle;
         
-
-        
+        public static bool IsDead;
         private void Start()
         {
-            isDead = false;
+            IsDead = false;
         }
 
         private void OnEnable()
@@ -31,7 +28,7 @@ namespace Player
 
         private void Death(bool f)
         {
-            isDead = f;
+            IsDead = f;
 
             deathExplosionParticle.Play();
             StartCoroutine(DeathParticleStopRoutine());

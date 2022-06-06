@@ -516,6 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7799577213459853523}
+  - component: {fileID: 5878405956975125898}
   m_Layer: 0
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
@@ -539,6 +540,19 @@ Transform:
   m_Father: {fileID: 7649328917211826286}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5878405956975125898
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682823432207807336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2914155377780391152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,9 +1097,9 @@ GameObject:
   - component: {fileID: 5390426811241323280}
   - component: {fileID: 2030710515981484394}
   - component: {fileID: 2030710515981484399}
-  - component: {fileID: 2030710515981484396}
   - component: {fileID: 2030710515981484397}
   - component: {fileID: 4243078631207477953}
+  - component: {fileID: 267663506642819124}
   m_Layer: 0
   m_Name: Huggy Wuggy
   m_TagString: Untagged
@@ -1150,19 +1164,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &2030710515981484396
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721307381898117546}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.64521337, y: 2.154808, z: 0.37649685}
-  m_Center: {x: 0.037924588, y: 1.1019592, z: 0.029733926}
 --- !u!114 &2030710515981484397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,7 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hairMat: {fileID: 2100000, guid: e0a54199d1e825549bcc9217c3fae4b6, type: 2}
-  hairColor: 0
+  hairColor: 1
   colors:
   - name: Blue
     color: {r: 0, g: 0.12013197, b: 1, a: 1}
@@ -1198,7 +1199,22 @@ MonoBehaviour:
     color: {r: 1, g: 0, b: 0.22568512, a: 1}
   - name: Green
     color: {r: 0.514151, g: 1, b: 0.52558273, a: 1}
-  isDebug: 0
+  - name: Yellow
+    color: {r: 0.9019475, g: 1, b: 0, a: 1}
+  applyInEditor: 0
+--- !u!65 &267663506642819124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721307381898117546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5681393, y: 1.3325672, z: 0.20940739}
+  m_Center: {x: 0.028650228, y: 0.68, z: 0.08}
 --- !u!1 &4777601639501555280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1167370557802617154}
+  - component: {fileID: 4832323872927412656}
   m_Layer: 0
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
@@ -1861,6 +1878,19 @@ Transform:
   m_Father: {fileID: 5329496237713782682}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4832323872927412656
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790269471754505367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8886319617043901568
 GameObject:
   m_ObjectHideFlags: 0
