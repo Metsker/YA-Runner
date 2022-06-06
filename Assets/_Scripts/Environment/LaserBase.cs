@@ -43,7 +43,7 @@ public class LaserBase : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.transform.root.TryGetComponent<PlayerData>(out var obj)) return;
+        if (!other.transform.root.TryGetComponent<PlayerData>(out _)) return;
         laserSparksParticle.Stop();
     }
 }
